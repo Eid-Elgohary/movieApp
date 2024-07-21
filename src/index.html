@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- font awosome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+   <link rel="stylesheet" href="../dist/output.css">
+   <!-- <link rel="stylesheet" href="../dist/style.css"> -->
+   <title>movie App</title>
+</head>
+<body  class="bg-[#0D0D0D] ">
+
+   <!-- =============== loadin screen =============== -->
+   <div class="loading-screen absolute top-0 size-full z-20 hidden ">
+      <span class="loader size-[50px] block rounded-full"></span>
+   </div>
+
+   <main class="w-[86%]  mx-auto " >
+
+      <!-- =============== side bar =============== -->
+      <aside class="fixed left-[-260px]  h-screen z-10 flex ">
+
+         <div class="hidden-nav w-[260px] bg-[#0D0D0D] flex flex-col justify-between  p-[24px]">
+            <div class="links overflow-hidden ">
+               <ul class="">
+                  <li id="now_playing" class="text-[#F9F6F6] li font-[300] hover:text-[#FF655C] capitalize py-2 cursor-pointer relative top-[300px] ">now playing</li>
+                  <li id="popular" class="text-[#F9F6F6] li font-[300] hover:text-[#FF655C] capitalize py-2 cursor-pointer relative top-[300px] ">popular</li>
+                  <li id="top_rated" class="text-[#F9F6F6] li font-[300] hover:text-[#FF655C] capitalize py-2 cursor-pointer relative top-[300px] ">top rated</li>
+                  <li id="trending" class="text-[#F9F6F6] li font-[300] hover:text-[#FF655C] capitalize py-2 cursor-pointer relative top-[300px] ">trending</li>
+                  <li id="upcoming" class="text-[#F9F6F6] li font-[300] hover:text-[#FF655C] capitalize py-2 cursor-pointer relative top-[300px] ">up coming</li>
+                  <li class="text-[#F9F6F6] font-[300] hover:text-[#FF655C] capitalize py-2 cursor-pointer relative top-[300px] "><a href="#contact">contact us</a> </li>
+               </ul>
+            </div>
+            <div class="nav-footer">
+               <div class="social-icons space-x-1">
+                  <i class="fa-brands fa-facebook cursor-pointer text-[#F9F6F6]"></i>
+                  <i class="fa-brands fa-twitter cursor-pointer text-[#F9F6F6]"></i>
+                  <i class="fa-solid fa-globe cursor-pointer text-[#F9F6F6]"></i>
+
+               </div>
+               <p class="footer text-[#999999] font-[300] capitalize mb-4">Copyright © 2019 All Rights
+                  Reserved.</p>
+                  <p class="text-[#999999] font-[300]">created by <span class="text-[#FF655C]">hossam ramadan</span></p>
+            </div>
+         </div>
+         <div class="side-nav flex justify-between items-center flex-col py-[24px] px-[12px] bg-transparent md:bg-white">
+            <img src="images/logo.png" alt="" class="w-full size-[55px]">
+            <i class="fa-solid fa-bars cursor-pointer text-[35px] font-bold open text-white md:text-black  "></i>
+            <i class="fa-solid fa-xmark cursor-pointer text-[35px] font-bold close text-white md:text-black hidden"></i>
+            <div>
+               <i class="fa-solid fa-globe block mb-1 cursor-pointer"></i>
+               <i class="fa-solid fa-share-nodes block cursor-pointer "></i>
+            </div>
+         </div>
+
+      </aside><!--  end of side bar -->
+
+      <!-- =============== search page =============== -->
+      <div class="search-fields w-3/4 mx-auto pt-12 space-x-3">
+         <input type="text" class="px-4 py-1.5 text-white border-[2px] block rounded-full mx-auto border-[#ced4da] search  w-1/2 bg-[#0D0D0D]" placeholder="search " >
+         
+      </div><!-- end of search  -->
+
+
+      <!-- =============== main content =============== -->
+      <div class="flex mx-auto main py-[24px] gap-y-5 justify-cener flex-wrap items-center">
+
+      </div><!--  end of content  -->
+
+
+      <!-- =============== contact  us =============== -->
+      <div id="contact" class="py-12">
+         <h2 class="text-white text-[32px] mb-2 font-[500]">contact us</h2>
+         <div class="flex mx-auto flex-wrap justify-center items-center">
+
+
+               <div class="w-full md:w-1/2  px-3 ">
+                  <input type="text" id="name" placeholder="enter your name" class="placeholder:capitalize placeholder:text-[#a5aaaf] placeholder:text-center text-white mt-6 border-b-[1px] border-b-[#ced4da] py-1.5 px-3 w-full bg-transparent focus:outline-none focus:border-b-[#ced4da] focus:border-b-[1px]  ">
+                  <p class="text-[#D62E33] font-[300] ggg hidden ">invalid name,only characters allowed</p>
+               </div>
+
+               <div class="w-full md:w-1/2  px-3 ">
+                  <input type="email" id="email" placeholder="enter your email" class="placeholder:capitalize placeholder:text-[#a5aaaf] placeholder:text-center text-white mt-6 border-b-[1px] border-b-[#ced4da] py-1.5 px-3 w-full bg-transparent focus:outline-none focus:border-b-[#ced4da] focus:border-b-[1px] mail">
+                  <p class="text-[#D62E33] font-[300] hidden ">invalid email,try example@domain.com</p>
+               </div>
+
+               <div class="w-full md:w-1/2  px-3 ">
+                  <input type="number" id="phone" placeholder="enter your phone" class="placeholder:capitalize placeholder:text-[#a5aaaf] placeholder:text-center text-white mt-6 border-b-[1px] border-b-[#ced4da] py-1.5 px-3 w-full bg-transparent focus:outline-none focus:border-b-[#ced4da] focus:border-b-[1px] ">
+                  <p class="text-[#D62E33] font-[300] hidden">invalid phone number</p>
+               </div>
+
+               <div class="w-full md:w-1/2  px-3 ">
+                  <input type="number" id="age" placeholder="enter your age" class="placeholder:capitalize placeholder:text-[#a5aaaf] placeholder:text-center text-white mt-6 border-b-[1px] border-b-[#ced4da] py-1.5 px-3 w-full bg-transparent focus:outline-none focus:border-b-[#ced4da] focus:border-b-[1px] ">
+                  <p class="text-[#D62E33] font-[300] hidden">your age must be over 16+</p>
+               </div>
+
+               <div class="w-full md:w-1/2  px-3 ">
+                  <input type="password" id="password" placeholder="enter your password" class="placeholder:capitalize placeholder:text-[#a5aaaf] placeholder:text-center text-white mt-6 border-b-[1px] border-b-[#ced4da] py-1.5 px-3 w-full bg-transparent focus:outline-none focus:border-b-[#ced4da] focus:border-b-[1px] ">
+                  <p class="text-[#D62E33] font-[300] hidden">password must contain numbers & letters at least 8 characters</p>
+               </div>
+
+               <div class="w-full md:w-1/2  px-3 ">
+                  <input type="password" id="repass" placeholder="reEnter password" class="placeholder:capitalize placeholder:text-[#a5aaaf] placeholder:text-center text-white mt-6 border-b-[1px] border-b-[#ced4da] py-1.5 px-3 w-full bg-transparent focus:outline-none focus:border-b-[#ced4da] focus:border-b-[1px] ">
+                  <p class="text-[#D62E33] font-[300] hidden ">password not match</p>
+               </div>
+
+               <div class="btn-div mt-12 w-full">
+               <button class="border-none bg-[#d62e33] block cursor-none  rounded-lg py-2 px-4 mx-auto text-[#F8F6F6] submit-btn " >submit</button>
+               </div>
+
+         </div>
+
+      </div>  <!--end of contact  us  -->
+
+
+   </main>
+
+   <script src="jsFiles/jquery-3.7.1.min.js"></script>
+   <script src="jsFiles/script.js"></script>
+</body>
+</html>
